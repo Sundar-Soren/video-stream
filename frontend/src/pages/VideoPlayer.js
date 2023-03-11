@@ -54,7 +54,9 @@ const VideoPlayer = () => {
             </span>{" "}
             {video?.likes}
           </div>
-          <TwitterShareButton url="test-url">
+          <TwitterShareButton
+            url={`https://video-stream-frontend.vercel.app/video/${video_id}`}
+          >
             <div className="text-gray-200 mb-4 font-bold cursor-pointer">
               Share
             </div>
