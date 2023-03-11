@@ -3,12 +3,14 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import VideoPlayer from "./pages/VideoPlayer";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   const Layout = () => {
     return (
       <div>
         <Navbar />
+        <Sidebar />
         <Outlet />
       </div>
     );

@@ -20,13 +20,15 @@ const Home = () => {
   console.log(videoList);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-      {videoList.length > 0 &&
-        videoList.map((video, i) => (
-          <div className="bg-gray-200" key={i}>
-            <VideoCard video={video} />
-          </div>
-        ))}
+    <div className="p-4 sm:ml-64 mt-14 dark:bg-gray-800">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 lg:gap-2">
+        {videoList.length > 0 &&
+          videoList.map((video, i) => (
+            <div key={i}>
+              <VideoCard video={video} />
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
