@@ -8,7 +8,9 @@ const Home = () => {
   useEffect(() => {
     const getVideoList = async () => {
       try {
-        const { data } = await axios.get("http://localhost:8000/videos");
+        const { data } = await axios.get(
+          "https://video-stream-712o.vercel.app/videos"
+        );
         setVideoList(data);
       } catch (error) {
         console.log(error.message);

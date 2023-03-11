@@ -12,7 +12,7 @@ const VideoPlayer = () => {
     const fetchVideo = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8000/video/${video_id}`
+          `https://video-stream-712o.vercel.app/video/${video_id}`
         );
         setVideo(data);
       } catch (error) {
@@ -24,7 +24,7 @@ const VideoPlayer = () => {
   const likeVideo = async () => {
     try {
       const { data } = await axios.patch(
-        `http://localhost:8000/video/${video_id}`
+        `https://video-stream-712o.vercel.app/video/${video_id}`
       );
       setVideo(data);
     } catch (error) {
